@@ -33,9 +33,6 @@
 <script>
 import {mapState} from 'vuex'
 export default {
-  created() {
-    // console.log(this.$store.state.isCollapse)
-  },
   computed: {
     ...mapState(['isCollapse'])
   }

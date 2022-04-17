@@ -9,8 +9,13 @@ import {request} from './api'
 import qs from 'qs'
 Vue.prototype.$request = request
 Vue.prototype.$qs = qs
-
 import './plugins/element.js'
+
+// tinymce 富文本编辑器
+import tinymce from 'tinymce'
+import VueTinymce from '@packy-tang/vue-tinymce/src/vue-tinymce.vue'
+Vue.prototype.$tinymce = tinymce
+Vue.use(VueTinymce)
 
 Vue.config.productionTip = false
 

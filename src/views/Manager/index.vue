@@ -27,6 +27,7 @@ export default {
 <style lang="scss" scoped>
 .manager{
   .menu {
+    z-index: 9999;
     box-sizing: border-box;
     // width: 200px;
     height: 100vh;
@@ -42,6 +43,10 @@ export default {
     // padding-left: 200px;
     // box-sizing: border-box;
     margin-left: 200px;
+    min-width: 910px;
+    height: 100vh;
+    background: #F8F8F8;
+    overflow: hidden;
   }
   .menu-collapse {
     margin-left: 64px;

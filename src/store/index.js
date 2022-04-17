@@ -5,7 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    mobileNavStatus: false
+    mobileNavStatus: false,
+    editorArticle: null
   },
   getters: {
   },
@@ -15,6 +16,9 @@ export default new Vuex.Store({
     },
     HIDE_MOBILENAV(state) {
       state.mobileNavStatus = false
+    },
+    SAVE_EDITOR_ARTICLE(state, payload) {
+      state.editorArticle = payload
     }
   },
   actions: {

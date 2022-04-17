@@ -2,14 +2,14 @@
   <div class="content">
     <div class="main">
       <div class="login">
-        <div class="pic">图片</div>
+        <div class="pic"></div>
         <p class="username">Admin</p>
         <div>
           <input type="password" class="pwd" v-model="pwd" />
         </div>
       </div>
       <div class="btn_login" @click="login">
-        <span class="iconfont icon-Rightarrow"></span>
+        <span class="iconfont icon-arrowright"></span>
       </div>
     </div>
 
@@ -26,17 +26,32 @@ export default {
   methods: {
     async login() {
       if(this.pwd.trim().length == 0){
-        console.log('error')
-        console.log(this.$store.state)
+        alert('密码不能为空')
         return
       }
-      console.log('login')
+      const _data = {
+        username: 'hlw',
+        pwd: this.pwd
+      }
+
+      this.$request.post('/api/login', this.$qs.stringify(_data))
+        .then(res=>{
+          if(res.data.status === '10001') {
+            // 登录成功
+            localStorage.setItem('token', res.data.token)
+            this.$router.replace({name: 'ManagerHome'})
+          }else {
+            console.log(res.data.msg)
+          }
+        })
+
+      // console.log('login')
       // this.$store.commit('LOGIN_SUCCESS', ()=> {
       //   this.$router.push({name:'Manager'})
       // })
       // this.$router.push({name:'Manager'})
-      await this.$store.dispatch('LOGIN_ACTION')
-      this.$router.push({name:'Manager'})
+      // await this.$store.dispatch('LOGIN_ACTION')
+      // this.$router.push({name:'Manager'})
     }
   }
 
