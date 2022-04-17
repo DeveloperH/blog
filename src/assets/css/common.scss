@@ -1,0 +1,112 @@
+.headbar {
+  background-color: cornflowerblue;
+  height: 3px;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+  main {
+    width: 100%;
+    display: inline-block;
+  }
+  header {
+    width: 240px;
+    margin-left: 20px;
+    background: rgba(255, 255, 255, 0.75);
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    .title {
+      height: 110px;
+      background: cornflowerblue;
+      color: #fff;
+      font-size: 16px;
+      text-align: center;
+      padding-top: 30px;
+      box-sizing: border-box;
+    }
+    .site-nav {
+      opacity: 1;
+      margin: 15px 0;
+      #menu li {
+        line-height: 2;
+      }
+      #menu li a {
+        display: block;
+        padding: 5px 20px;
+        font-size: 13px;
+      }
+      #menu li input {
+        background-color: rgba(255, 255, 255, 0);
+        border: 0;
+        font-size: 14px;
+        color: dodgerblue !important;
+        outline: none;
+      }
+      #menu li .search-icon {
+        padding: 5px 0px 5px 20px;
+      }
+      #menu li:hover{
+        background: #f9f9f9;
+      }
+      .searchresult li>a:hover {
+        color: dodgerblue;
+      }
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  color: #fff;
+  margin: 20px 0px;
+  #ba {
+    color: #fff;
+  }
+}
+
+i {
+  margin-right: 15px;
+}
+
+.key-input {
+  
+}
+
+// 小屏
+@media screen and (max-width: 991px) {
+  header {
+    display: none !important;
+  }
+  .nav-margin {
+    height: 50px;
+    display: block;
+  }
+}
+
+// 中屏
+@media screen and (min-width: 992px) {
+  .container {
+    width: 940px;
+    main {
+      width: calc(100% - 260px);
+    }
+  }
+  .article-item {
+    padding: 40px !important;
+  }
+  .article-info {
+    margin-bottom: 40px !important;
+  }
+  .mobile-nav {
+    display: none;
+  }
+}
+
+// 大屏
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+

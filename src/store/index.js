@@ -5,10 +5,17 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    mobileNavStatus: false
   },
   getters: {
   },
   mutations: {
+    TOGGLE_MOBILENAV_STATUS(state) {
+      state.mobileNavStatus = !state.mobileNavStatus
+    },
+    HIDE_MOBILENAV(state) {
+      state.mobileNavStatus = false
+    }
   },
   actions: {
   },
