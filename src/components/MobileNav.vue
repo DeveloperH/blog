@@ -12,6 +12,7 @@
 						<li><router-link to="/about"><i class="iconfont icon-user"></i>关于</router-link></li>
 						<li><a href="/books" target="_blank"><i class="iconfont icon-book"></i>GitBook</a></li>
 						<li><a href="https://github.com/developerH" target="_blank"><i class="iconfont icon-github-fill"></i>开源库</a></li>
+            <li><router-link to="/login"><i class="iconfont icon-editor"></i>后台管理</router-link></li>
 					</ul>
 				</nav>
     </div>

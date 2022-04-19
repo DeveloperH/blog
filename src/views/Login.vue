@@ -41,7 +41,8 @@ export default {
             localStorage.setItem('token', res.data.token)
             this.$router.replace({name: 'ManagerHome'})
           }else {
-            console.log(res.data.msg)
+            this.$message.error(res.data.msg)
+            // console.log(res.data.msg)
           }
         })
 
